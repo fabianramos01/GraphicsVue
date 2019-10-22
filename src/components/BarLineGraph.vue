@@ -1,5 +1,5 @@
 <template>
-    <apexchart width="400" type="bar" :options="options" :series="series"></apexchart>
+    <apexchart width="400" v-bind:type="data.type" :options="options" :series="series"></apexchart>
 </template>
 
 <script>
@@ -28,11 +28,46 @@
                             offsetY: 0
                         }
                     },
-                    theme: {
-                        palette: 'palette4'
-                    },
+                    // theme: {
+                    //     palette: 'palette4'
+                    // },
+                    // chart: {
+                    //     height: 380,
+                    //     type: "line",
+                    //     foreColor: '#6D6D6D'
+                    // },
                     fill: {
-                        type: 'gradient',
+                        type: "gradient",
+                        gradient: {
+                            shadeIntensity: 1,
+                            opacityFrom: 0.7,
+                            opacityTo: 0.9,
+                            colorStops: [
+                                {
+                                    offset: 0,
+                                    color: "#EB656F",
+                                    opacity: 1
+                                },
+                                {
+                                    offset: 20,
+                                    color: "#FAD375",
+                                    opacity: 1
+                                },
+                                {
+                                    offset: 60,
+                                    color: "#61DBC3",
+                                    opacity: 1
+                                },
+                                {
+                                    offset: 100,
+                                    color: "#95DA74",
+                                    opacity: 1
+                                }
+                            ]
+                        }
+                    },
+                    grid: {
+                        borderColor: '#6D6D6D'
                     }
                 },
                 series: [{

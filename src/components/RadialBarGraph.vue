@@ -27,11 +27,10 @@
                                 total: {
                                     show: true,
                                     label: 'Total',
-                                    formatter: function () {
-                                        //const reducer = (accumulator, currentValue) => accumulator + currentValue;
-
-                                        // return this.data.series.reduce(reducer)
-                                        return 2
+                                    formatter: function (w) {
+                                        return w.globals.seriesTotals.reduce((a, b) => {
+                                            return a + b
+                                        }, 0)
                                     }
                                 }
                             }

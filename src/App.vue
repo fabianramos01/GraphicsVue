@@ -34,7 +34,8 @@
                 dataBar: {
                     seriesX: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
                     seriesY: [30, 40, 45, 50, 49, 60, 70, 91],
-                    name: "Ejemplo"
+                    name: "Ejemplo",
+                    type: 'line'
                 }
             }
 

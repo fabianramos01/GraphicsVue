@@ -25,6 +25,30 @@
                     },
                     legend: {
                         position: 'bottom'
+                    },
+                    plotOptions: {
+                        pie: {
+                            labels: {
+                                show: true,
+                                name: {
+                                    show: true,
+                                    fontSize: '22px',
+                                    fontFamily: 'Rubik',
+                                    color: '#dfsda',
+                                    offsetY: -10
+                                },
+                                value: {
+                                    show: true,
+                                    fontSize: '16px',
+                                    fontFamily: 'Helvetica, Arial, sans-serif',
+                                    color: '#dfsda',
+                                    offsetY: 16,
+                                    formatter: function (val) {
+                                        return val
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
