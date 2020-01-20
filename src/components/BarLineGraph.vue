@@ -1,5 +1,5 @@
 <template>
-    <apexchart width="400" v-bind:type="data.type" :options="options" :series="series"></apexchart>
+    <apexchart width="400" v-bind:type="data.type" :options="options" :series="series"/>
 </template>
 
 <script>
@@ -21,53 +21,63 @@
                         categories: this.data.seriesX,
                         axisBorder: {
                             show: true,
-                            color: '#78909C',
+                            color: 'black',
                             height: 5,
                             width: '100%',
                             offsetX: 0,
                             offsetY: 0
-                        }
-                    },
-                    // theme: {
-                    //     palette: 'palette4'
-                    // },
-                    // chart: {
-                    //     height: 380,
-                    //     type: "line",
-                    //     foreColor: '#6D6D6D'
-                    // },
-                    fill: {
-                        type: "gradient",
-                        gradient: {
-                            shadeIntensity: 1,
-                            opacityFrom: 0.7,
-                            opacityTo: 0.9,
-                            colorStops: [
-                                {
-                                    offset: 0,
-                                    color: "#EB656F",
-                                    opacity: 1
-                                },
-                                {
-                                    offset: 20,
-                                    color: "#FAD375",
-                                    opacity: 1
-                                },
-                                {
-                                    offset: 60,
-                                    color: "#61DBC3",
-                                    opacity: 1
-                                },
-                                {
-                                    offset: 100,
-                                    color: "#95DA74",
-                                    opacity: 1
-                                }
-                            ]
-                        }
+                        },
+                        title: {
+                            text: 'Ok',
+                            offsetX: 0,
+                            offsetY: 0,
+                            style: {
+                                color: undefined,
+                                fontSize: '12px',
+                                fontFamily: 'Helvetica, Arial, sans-serif',
+                                cssClass: 'apexcharts-xaxis-title',
+                            },
+                        },
                     },
                     grid: {
+                        show: true,
                         borderColor: '#6D6D6D'
+                    },
+                    legend: {
+                        show: true,
+                        position: 'bottom',
+                        showForSingleSeries: true,
+                        fontSize: '14px',
+                        fontFamily: 'Helvetica, Arial',
+                        markers: {
+                            width: 10,
+                            height: 10,
+                            radius: 12,
+                        }
+                    },
+                    plotOptions: {
+                        bar: {
+                            horizontal: false,
+                            endingShape: 'flat',
+                            columnWidth: '80%',
+                            barHeight: '70%',
+                            distributed: false,
+                            colors: {
+                                ranges: [{
+                                    from: 0,
+                                    to: 0,
+                                    color: 'black'
+                                }],
+                                backgroundBarColors: [],
+                                backgroundBarOpacity: 1,
+                            },
+                            dataLabels: {
+                                position: 'top',
+                                maxItems: 100,
+                                hideOverflowingLabels: true,
+                                orientation: 'horizontal'
+                            }
+                        }
                     }
                 },
                 series: [{

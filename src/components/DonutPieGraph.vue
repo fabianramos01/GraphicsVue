@@ -1,5 +1,5 @@
 <template>
-    <apexchart width="400" v-bind:type="data.type" :options="options" :series="series"></apexchart>
+    <apexchart width="400" v-bind:type="data.type" :options="options" :series="series"/>
 </template>
 
 <script>
@@ -15,8 +15,7 @@
             return {
                 series: this.data.series,
                 options: {
-                    labels: this.data.labels
-                    ,
+                    labels: this.data.labels,
                     theme: {
                         palette: 'palette10'
                     },

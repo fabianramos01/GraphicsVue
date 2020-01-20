@@ -15,6 +15,10 @@
             return {
                 series: this.data.series,
                 options: {
+                    legend: {
+                        show: true,
+                        position: 'bottom'
+                    },
                     plotOptions: {
                         radialBar: {
                             dataLabels: {
